@@ -19,7 +19,8 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ open, onClose,id}) =>
     const otpRef = useRef<Array<HTMLInputElement | null>>([]);
     const [otp, setOtp] = useState<string>('')
     const [error, setError] = useState<boolean>(false)
-    console.log(error)
+
+console.log(error);
 
     useEffect(() => {
         const handleTokenUpdate = () => {
@@ -33,7 +34,9 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ open, onClose,id}) =>
         };
       }, [refetch]);
 
-    const handleChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
+
+    const handleChange = (index: number, e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
         const value = e.target.value.replace(/\D/g, "")
 
         if (value.length > 1) return;
@@ -90,7 +93,7 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ open, onClose,id}) =>
                     Enter the 6-digit OTP sent to your email.
                 </Typography>
 
-                {/* OTP Input Fields - In Single Line */}
+
                 <Grid container spacing={1} justifyContent="center">
                     {Array.from({ length: 6 }).map((_, index) => (
                         <Grid item key={index}>
@@ -109,7 +112,6 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ open, onClose,id}) =>
                 </Grid>
             </DialogContent>
 
-            {/* Verify Button */}
             <DialogActions sx={{ justifyContent: "center", pb: 2 }}>
                 <Button variant="contained" color="primary" fullWidth onClick={handleVerification}>
                     Verify OTP

@@ -9,13 +9,16 @@ import ReportModal from "@/components/ui/report";
 import Image from "next/image"; 
 import ReviewSection from "./reviewSection";
 
-interface DoctorType {
+
+export interface DoctorType {
+
   _id: string;
   name: string;
   email: string;
   phone: string;
   profileImage: string;
 }
+
 
 export interface ReviewType {
   _id: string;
@@ -26,6 +29,7 @@ export interface ReviewType {
   updatedAt: string;
   __v: number;
 }
+
 interface ProfileImage {
   originalProfile: string;
   thumbnail: string;

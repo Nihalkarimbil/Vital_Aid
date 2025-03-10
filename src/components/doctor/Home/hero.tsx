@@ -23,7 +23,7 @@ function Hero() {
     >
       <Grid container spacing={4} alignItems="center" justifyContent="space-between" sx={{ px: 4 }}>
         
-        {/* Text container */}
+
         <Grid item xs={12} md={6} textAlign={{ xs: 'center', md: 'left' }}>
           <Typography variant="h4" sx={{ color: 'green', fontWeight: 'lighter' }}>
             Welcome <br />
@@ -31,7 +31,7 @@ function Hero() {
           </Typography>
         </Grid>
 
-        {/* Image container */}
+
         <Grid item xs={12} md={6} display="flex" justifyContent="center">
           <Image
             src="/Doctor.png"
