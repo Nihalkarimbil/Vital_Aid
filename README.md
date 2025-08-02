@@ -56,7 +56,6 @@ It streamlines healthcare operations by providing modern, real-time features for
 
 ---
 
-
 ## ✨ Authors
 
 - [Your Team Member 1](https://github.com/yourprofile)
